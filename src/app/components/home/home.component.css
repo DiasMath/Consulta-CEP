@@ -1,4 +1,8 @@
-.container{
-    min-height: 66vh;
-    margin-top: 1em;
-}
+  /* Centralizar o container na tela */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+   
+  }
