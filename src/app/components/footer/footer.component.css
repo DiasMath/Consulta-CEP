@@ -1,15 +1,6 @@
 footer{
     border-top: 1px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(154, 201, 129);
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px; 
 }
 
 footer h3{
@@ -26,4 +17,13 @@ footer span{
     flex-direction: column;
     align-items: center;
 }
-  
+
+a {
+    text-decoration: none;
+    color:#444;
+    transition: .3s;
+}
+
+a:hover{
+    color: #009908;
+}
