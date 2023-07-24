@@ -1,15 +1,6 @@
 footer{
     border-top: 1px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(154, 201, 129);
-<<<<<<< HEAD
-  
-=======
-    position: fixed;
->>>>>>> 4c8477f7aff17e0235b5c027e79f088ceeb26f58
     left: 0;
     bottom: 0;
     width: 100%;
@@ -30,7 +21,7 @@ footer span{
     flex-direction: column;
     align-items: center;
 }
-  
+
 .container {
     display: flex;
     justify-content: center;
@@ -38,3 +29,4 @@ footer span{
     padding: 2em;
    
   }
+

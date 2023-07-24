@@ -4,8 +4,8 @@
     max-width: 400px;
     padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color:white;
+    border-radius: 7px;
+    background-color:rgb(247, 247, 247);
   }
   
   .form-group {
