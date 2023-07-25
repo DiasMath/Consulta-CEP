@@ -16,7 +16,7 @@ footer span{
     color:#009908;
 }
 
-#infoFooter{
+.infoFooter{
     display: flex;
     flex-direction: column;
     align-items: center;

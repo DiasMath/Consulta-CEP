@@ -1,11 +1,11 @@
-
 .formulario {
-    width: 400px;
+    width: 80%;
     max-width: 400px;
-    padding: 20px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 7px;
     background-color:rgb(247, 247, 247);
+    margin: 0 auto;
   }
   
   .form-group {
@@ -23,3 +23,12 @@
   #CEP{
     width: 40%;
   }
+
+/* Media query para tornar o formulário responsivo */
+@media (max-width: 600px) {
+  form {
+    width: 90%; /* Reduz a largura do formulário em telas menores */
+    max-width: 100%;
+  }
+}
+
