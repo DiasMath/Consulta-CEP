@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormCepComponent } from './components/form-cep/form-cep.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     HeaderComponent,
     FormCepComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent
 
   ],
   imports: [
