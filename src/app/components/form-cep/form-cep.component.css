@@ -1,4 +1,4 @@
-.formulario {
+  .formulario {
     width: 80%;
     max-width: 400px;
     padding: 15px;
@@ -6,6 +6,9 @@
     border-radius: 7px;
     background-color:rgb(247, 247, 247);
     margin: 0 auto;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    box-shadow: 0 8px 12px 8px rgba(0, 0, 0, 0.2);
   }
   
   .form-group {
@@ -18,17 +21,38 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    border: 1px solid #4CAF50;
+  }
+
+  .form-control:focus {
+    border-color: #00ff0d;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   #CEP{
     width: 40%;
   }
 
-/* Media query para tornar o formulário responsivo */
-@media (max-width: 600px) {
-  form {
-    width: 90%; /* Reduz a largura do formulário em telas menores */
-    max-width: 100%;
-  }
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+#submitBtn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: .3s;
+  border-radius: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#submitBtn:hover {
+  background-color: #0f7e14;
+  box-shadow: 10px;
+}
