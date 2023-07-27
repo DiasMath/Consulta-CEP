@@ -4,7 +4,7 @@
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 7px;
-    background-color:rgb(247, 247, 247);
+    background-color:rgb(241, 255, 235);
     margin: 0 auto;
     margin-top: 3em;
     margin-bottom: 3em;
@@ -21,13 +21,13 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    border: 1px solid #4CAF50;
+    border: 1px solid #0e270afb;
   }
 
   .form-control:focus {
-    border-color: #00ff0d;
+    border: 1px solid #00ff0d;
     outline: none;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   }
 
   #CEP{
