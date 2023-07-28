@@ -1,6 +1,6 @@
 <div class="formulario">
         
-    <form>
+    <form #f="ngForm" method="get">
     
 
         <div class="form-group">
@@ -9,8 +9,11 @@
                 type="text"
                 class="form-control"
                 id="CEP"
+                name="cep"
+                [(ngModel)]="cepData.cep"
                 placeholder="Digite seu CEP"
                 maxlength="8"
+                (blur)="buscarCEP()"
                 required >
 
         </div>
@@ -22,6 +25,8 @@
                 class="form-control"
                 name="rua" 
                 id="rua" 
+                name="rua"
+                [(ngModel)]="cepData.logradouro"
                 placeholder="Rua"
                 required >
       
@@ -34,6 +39,8 @@
                 class="form-control"
                 name="bairro"
                 id="bairro" 
+                name="bairro"
+                [(ngModel)]="cepData.bairro"
                 placeholder="Bairro"
                 required >
 
@@ -46,6 +53,8 @@
                 class="form-control"
                 name="cidade" 
                 id="cidade" 
+                name="cidade"
+                [(ngModel)]="cepData.localidade"
                 placeholder="Cidade"
                 required >
       
@@ -58,6 +67,8 @@
                 class="form-control"
                 name="estado" 
                 id="estado" 
+                name="estado"
+                [(ngModel)]="cepData.uf"
                 placeholder="Estado"
                 required >
       
@@ -70,6 +81,8 @@
                 class="form-control"
                 name="ibge"
                 id="ibge" 
+                name="ibge"
+                [(ngModel)]="cepData.ibge"
                 placeholder="IBGE"
                 required >
 

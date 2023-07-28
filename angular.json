@@ -59,11 +59,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
+            
             "production": {
               "browserTarget": "consulta-cep:build:production"
-            },
+            }, 
             "development": {
               "browserTarget": "consulta-cep:build:development"
+            },
+            "options": {
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
