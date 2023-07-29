@@ -24,7 +24,7 @@ export class FormCepComponent implements OnInit {
 
   buscarCEP(){
     this.service.getCEP(this.cepData).subscribe( data => {
-      this.cepData.cep = data.cep;
+    //  this.cepData.cep = data.cep;
       this.cepData.logradouro = data.logradouro;
       this.cepData.localidade = data.localidade;
       this.cepData.bairro = data.bairro;
