@@ -23,14 +23,13 @@ export class FormCepComponent implements OnInit {
   constructor(private service: ReqAPIService) {}
 
   buscarCEP(){
-    this.service.getCEP(this.cepData).subscribe( data => {
-    //  this.cepData.cep = data.cep;
+    this.service.getCEP(this.cepData.cep).subscribe( data => {
+      this.cepData.cep = data.cep;
       this.cepData.logradouro = data.logradouro;
       this.cepData.localidade = data.localidade;
       this.cepData.bairro = data.bairro;
       this.cepData.uf = data.uf;
       this.cepData.ibge = data.ibge;
-
     });
   }
 
@@ -38,5 +37,5 @@ export class FormCepComponent implements OnInit {
     this.buscarCEP();
 
     console.log(this.buscarCEP);
-}
+  }
 }

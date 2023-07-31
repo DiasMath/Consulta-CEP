@@ -64,8 +64,7 @@
               "browserTarget": "consulta-cep:build:production"
             },
             "development": {
-              "browserTarget": "consulta-cep:build:development",
-              "proxyConfig": "proxy.conf.js"
+              "browserTarget": "consulta-cep:build:development"
             }
           },
           "defaultConfiguration": "development"

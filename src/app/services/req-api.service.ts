@@ -12,7 +12,7 @@ export class ReqAPIService {
 
   constructor(private http: HttpClient) {}
 
-  getCEP(cep: cepDataModel): Observable<cepDataModel>{
-    return this.http.get<cepDataModel>(`https://viacep.com.br/ws/${cep}/json/`);
+  getCEP(cep: string): Observable<cepDataModel>{
+    return this.http.get<cepDataModel>(`${environment.API_URL}${cep}/json/`);
   }
 }
