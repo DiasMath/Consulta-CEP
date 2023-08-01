@@ -31,11 +31,33 @@ export class FormCepComponent implements OnInit {
       this.cepData.uf = data.uf;
       this.cepData.ibge = data.ibge;
     });
-  }
+}
 
   blur(event: any) {
     this.buscarCEP();
-
-    console.log(this.buscarCEP);
   }
+
+// Limpa o campo CEP.
+  limparCEP(){
+    this.cepData.cep = '';
+  }
+
+  limparFormulario() {
+    this.cepData.cep = '';
+    this.cepData.logradouro = '';
+    this.cepData.bairro = '';
+    this.cepData.localidade = '';
+    this.cepData.uf = '';
+    this.cepData.ibge = '';
+  }
+
+// Validação para aceitar só números no campo CEP
+  validarNumeros(event: any) {
+    const input = event.target as HTMLInputElement;
+    const inputValue = input.value;
+    const numericInputValue = inputValue.replace(/\D/g, '');
+    input.value = numericInputValue;
+    this.cepData.cep = numericInputValue;
+  }
+
 }
