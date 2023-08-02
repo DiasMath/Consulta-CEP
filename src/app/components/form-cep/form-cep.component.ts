@@ -22,26 +22,47 @@ export class FormCepComponent implements OnInit {
   
   constructor(private service: ReqAPIService) {}
 
-  buscarCEP(){
-    this.service.getCEP(this.cepData.cep).subscribe( data => {
-      this.cepData.cep = data.cep;
+  // Validar se o CEP existe no banco do ViaCEP
+  validarCEP(data: cepDataModel) {
+    if (!("erro" in data)) {
+
       this.cepData.logradouro = data.logradouro;
-      this.cepData.localidade = data.localidade;
       this.cepData.bairro = data.bairro;
+      this.cepData.localidade = data.localidade;
       this.cepData.uf = data.uf;
       this.cepData.ibge = data.ibge;
-    });
-}
+    } else {
 
-  blur(event: any) {
+      this.limparCEP();
+      alert("CEP não encontrado!");
+    }
+    
+  }
+
+  // Chama o serviço para fazer a requisição
+  buscarCEP(){
+    this.service.getCEP(this.cepData.cep).subscribe( data => {
+      this.validarCEP(data);
+    });
+  }
+
+  // Ao sair do campo inicia a requisição
+  onBlur(event: FocusEvent) {
+    if(this.cepData.cep.length !== 8){
+      alert("O CEP deve conter 8 dígitos!");
+      this.limparCEP();
+      return;
+    }
+    
     this.buscarCEP();
   }
 
-// Limpa o campo CEP.
+// Limpa o campo CEP
   limparCEP(){
     this.cepData.cep = '';
   }
 
+  // Limpa o formulário
   limparFormulario() {
     this.cepData.cep = '';
     this.cepData.logradouro = '';
@@ -52,12 +73,11 @@ export class FormCepComponent implements OnInit {
   }
 
 // Validação para aceitar só números no campo CEP
-  validarNumeros(event: any) {
+  validarNumeros(event: Event) {
     const input = event.target as HTMLInputElement;
     const inputValue = input.value;
     const numericInputValue = inputValue.replace(/\D/g, '');
     input.value = numericInputValue;
     this.cepData.cep = numericInputValue;
   }
-
 }

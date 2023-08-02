@@ -13,7 +13,7 @@
                 [(ngModel)]="cepData.cep"
                 placeholder="Digite seu CEP"
                 maxlength="8"
-                (blur)="buscarCEP()"
+                (blur)="onBlur($event)"
                 (input)="validarNumeros($event)"
                 required >
 
