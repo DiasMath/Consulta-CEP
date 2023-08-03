@@ -18,7 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     FormCepComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
 
   ],
   imports: [
