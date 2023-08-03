@@ -48,7 +48,7 @@ export class FormCepComponent implements OnInit {
 
   // Ao sair do campo inicia a requisição
   onBlur(event: FocusEvent) {
-    if(this.cepData.cep.length !== 8){
+    if(this.cepData.cep.length !== 8 && this.cepData.cep !== ""){
       alert("O CEP deve conter 8 dígitos!");
       this.limparCEP();
       return;
